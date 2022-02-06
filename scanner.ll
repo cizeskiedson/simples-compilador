@@ -69,9 +69,219 @@ eol     [\n\r]+
   return token::REAL;
 }
 
+"cadeia" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::CADEIARESV;
+}
+
+"continue" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::CONTINUE;
+}
+
+"de" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::DE;
+  }
+
+"enquanto" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::ENQUANTO;
+} 
+
+"faça" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::FACA;
+}
+
+"falso" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::FALSO;
+}
+
+"fim" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::FIM;
+}
+
+"fun" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::FUN;
+}
+
+
+"início" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::INICIO;
+}
+
+"inteiro" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::INTEIRO;
+}
+
+"limite" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::LIMITE;
+}
+
+
+"nulo" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::NULO;
+}
+
+"para" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::PARA;
+}
+
+"pare" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::PARE;
+}
+
+"ref" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::REF;
+}
+
+"retorne" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::RETORNE;
+}
+
+"se" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::SE;
+}
+
+"var" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::VAR;
+}
+
+"verdadeiro" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::VERDADEIRO;
+}
+
+"," {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::VIRGULA;
+}
+":" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::DOISPONTOS;
+}
+";" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::PONTOVIRGULA;
+}
+"(" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::ABREPARENTESES;
+}
+")" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::FECHAPARENTESES;
+}
+"[" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::ABRECOLCHETE;
+}
+"]" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::FECHACOLCHETE;
+}
+"{" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::ABRECHAVE;
+}
+"}" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::FECHACHAVE;
+}
+"." {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::PONTO;
+}
+"+" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::MAIS;
+}
+"-" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::MENOS;
+}
+"*" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::PRODUTO;
+}
+"/" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::BARRA;
+}
+"<>" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::COMPARASETA;
+}
+"<" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::MENOR;
+}
+"<=" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::MENORIGUAL;
+}
+">" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::MAIOR;
+}
+">=" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::MAIORIGUAL;
+}
+"&" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::E;
+}
+"|" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::OU;
+}
+":=" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::ATRIBUICAO;
+}
+"=" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::IGUAL;
+}
+"==" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::COMPARA;
+}
+"?" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::TERNARIA;
+}
+
+
+
 [A-Za-z][A-Za-z0-9_,.-]* {
   yylval->stringVal = new std::string(yytext, yyleng);
   return token::IDENTIFIER;
+}
+
+\"[^\"]+\" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::CADEIA;
+}
+
+\/*(.)**\/ {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::COMENTARIO;
 }
 
 {blank} { STEP(); }

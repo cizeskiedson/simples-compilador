@@ -1,0 +1,3 @@
+/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/CMakeFiles/sc.dir
+/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/CMakeFiles/edit_cache.dir
+/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/CMakeFiles/rebuild_cache.dir
