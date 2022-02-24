@@ -636,302 +636,350 @@ namespace Simples {
         {
           switch (yyn)
             {
-  case 51:
-#line 171 "parser.yy"
-                   { std::cout << "Inteiro: " << (yystack_[0].value.integerVal) << std::endl; }
+  case 59:
+#line 188 "parser.yy"
+                                                       {std::cout << "TESTE VARIAVEL DECLARADA" <<std::endl;}
 #line 643 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 52:
-#line 172 "parser.yy"
-                 { std::cout << "Real: " << (yystack_[0].value.doubleVal) << std::endl; }
+  case 60:
+#line 206 "parser.yy"
+                   { std::cout << "Inteiro: " << (yystack_[0].value.integerVal) << std::endl; }
 #line 649 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 53:
-#line 174 "parser.yy"
-                      {  std::cout << "Identificador: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 61:
+#line 207 "parser.yy"
+                 { std::cout << "Real: " << (yystack_[0].value.doubleVal) << std::endl; }
 #line 655 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 54:
-#line 176 "parser.yy"
-                  { std::cout << "Cadeia: " << *(yystack_[0].value.stringVal) << std::endl;  }
+  case 62:
+#line 209 "parser.yy"
+                      {  std::cout << "Identificador: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 661 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 55:
-#line 178 "parser.yy"
-            { std::cout << "Pare: " << *(yystack_[0].value.stringVal) << std::endl;  }
+  case 63:
+#line 211 "parser.yy"
+                  { std::cout << "Cadeia: " << *(yystack_[0].value.stringVal) << std::endl;  }
 #line 667 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 56:
-#line 180 "parser.yy"
-                       { std::cout << "Comentario: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 64:
+#line 213 "parser.yy"
+            { std::cout << "Pare: " << *(yystack_[0].value.stringVal) << std::endl;  }
 #line 673 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 57:
-#line 182 "parser.yy"
-            { std::cout << "Para: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 65:
+#line 215 "parser.yy"
+                       { std::cout << "Comentario: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 679 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 58:
-#line 184 "parser.yy"
-                        { std::cout << "Cadeia Tipo: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 66:
+#line 217 "parser.yy"
+            { std::cout << "Para: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 685 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 59:
-#line 186 "parser.yy"
-       { std::cout << "Cadeia Tipo: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 67:
+#line 219 "parser.yy"
+                        { std::cout << "Cadeia Tipo: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 691 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 60:
-#line 188 "parser.yy"
-                   { std::cout << "Enquanto: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 68:
+#line 221 "parser.yy"
+       { std::cout << "Cadeia Tipo: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 697 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 61:
-#line 190 "parser.yy"
-           { std::cout << "Faca: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 69:
+#line 223 "parser.yy"
+                   { std::cout << "Enquanto: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 703 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 62:
-#line 192 "parser.yy"
-             { std::cout << "Falso: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 70:
+#line 225 "parser.yy"
+                     { std::cout << "FEnquanto: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 709 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 63:
-#line 194 "parser.yy"
-         { std::cout << "Fim: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 71:
+#line 227 "parser.yy"
+           { std::cout << "Faca: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 715 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 64:
-#line 196 "parser.yy"
-         { std::cout << "Fun: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 72:
+#line 229 "parser.yy"
+             { std::cout << "Falso: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 721 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 65:
-#line 198 "parser.yy"
-                   { std::cout << "Continue: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 73:
+#line 231 "parser.yy"
+         { std::cout << "Fim: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 727 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 66:
-#line 200 "parser.yy"
-               { std::cout << "Inicio: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 74:
+#line 233 "parser.yy"
+             { std::cout << "Fpara: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 733 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 67:
-#line 202 "parser.yy"
-                 { std::cout << "Inteiro: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 75:
+#line 235 "parser.yy"
+         { std::cout << "Fse: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 739 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 68:
-#line 204 "parser.yy"
-               { std::cout << "Limite: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 76:
+#line 237 "parser.yy"
+         { std::cout << "Fun: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 745 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 69:
-#line 206 "parser.yy"
-           { std::cout << "Nulo: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 77:
+#line 239 "parser.yy"
+               { std::cout << "Global: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 751 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 70:
-#line 208 "parser.yy"
-         { std::cout << "Ref: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 78:
+#line 241 "parser.yy"
+                   { std::cout << "Continue: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 757 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 71:
-#line 210 "parser.yy"
-                 { std::cout << "Retorne: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 79:
+#line 243 "parser.yy"
+               { std::cout << "Inicio: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 763 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 72:
-#line 212 "parser.yy"
-       { std::cout << "Se: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 80:
+#line 245 "parser.yy"
+                 { std::cout << "Inteiro: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 769 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 73:
-#line 214 "parser.yy"
-         { std::cout << "Var: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 81:
+#line 247 "parser.yy"
+               { std::cout << "Limite: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 775 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 74:
-#line 216 "parser.yy"
-                       { std::cout << "Verdadeiro: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 82:
+#line 249 "parser.yy"
+             { std::cout << "Local: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 781 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 75:
-#line 218 "parser.yy"
-                 { std::cout << "Virgula: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 83:
+#line 251 "parser.yy"
+           { std::cout << "Nulo: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 787 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 76:
-#line 220 "parser.yy"
-                       { std::cout << "Dois Pontos: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 84:
+#line 253 "parser.yy"
+         { std::cout << "Ref: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 793 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 77:
-#line 222 "parser.yy"
-                           { std::cout << "Ponto e Virgula: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 85:
+#line 255 "parser.yy"
+                 { std::cout << "Retorne: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 799 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 78:
-#line 224 "parser.yy"
-                               { std::cout << "Abre Parenteses: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 86:
+#line 257 "parser.yy"
+       { std::cout << "Se: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 805 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 79:
-#line 226 "parser.yy"
-                                 { std::cout << "Fecha Parenteses: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 87:
+#line 259 "parser.yy"
+           { std::cout << "Tipo: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 811 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 80:
-#line 228 "parser.yy"
-                           { std::cout << "Abre Colchete: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 88:
+#line 261 "parser.yy"
+         { std::cout << "Var: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 817 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 81:
-#line 230 "parser.yy"
-                             { std::cout << "Fecha Colchete: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 89:
+#line 263 "parser.yy"
+             { std::cout << "Valor: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 823 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 82:
-#line 232 "parser.yy"
-                     { std::cout << "Abre Chave: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 90:
+#line 265 "parser.yy"
+                       { std::cout << "Verdadeiro: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 829 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 83:
-#line 234 "parser.yy"
-                       { std::cout << "Fecha Chave: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 91:
+#line 267 "parser.yy"
+                 { std::cout << "Virgula: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 835 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 84:
-#line 236 "parser.yy"
-             { std::cout << "Ponto: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 92:
+#line 269 "parser.yy"
+                       { std::cout << "Dois Pontos: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 841 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 85:
-#line 238 "parser.yy"
-           { std::cout << "Mais: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 93:
+#line 271 "parser.yy"
+                           { std::cout << "Ponto e Virgula: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 847 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 86:
-#line 240 "parser.yy"
-             { std::cout << "Menos: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 94:
+#line 273 "parser.yy"
+                               { std::cout << "Abre Parenteses: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 853 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 87:
-#line 242 "parser.yy"
-                 { std::cout << "Produto: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 95:
+#line 275 "parser.yy"
+                                 { std::cout << "Fecha Parenteses: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 859 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 88:
-#line 244 "parser.yy"
-             { std::cout << "Barra: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 96:
+#line 277 "parser.yy"
+                           { std::cout << "Abre Colchete: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 865 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 89:
-#line 246 "parser.yy"
-                         { std::cout << "Compara <>: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 97:
+#line 279 "parser.yy"
+                             { std::cout << "Fecha Colchete: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 871 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 90:
-#line 248 "parser.yy"
-             { std::cout << "Menor: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 98:
+#line 281 "parser.yy"
+                     { std::cout << "Abre Chave: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 877 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 91:
-#line 250 "parser.yy"
-                       { std::cout << "Menor Igual: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 99:
+#line 283 "parser.yy"
+                       { std::cout << "Fecha Chave: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 883 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 92:
-#line 252 "parser.yy"
-             { std::cout << "Maior: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 100:
+#line 285 "parser.yy"
+             { std::cout << "Ponto: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 889 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 93:
-#line 254 "parser.yy"
-                       { std::cout << "Maior Igual: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 101:
+#line 287 "parser.yy"
+           { std::cout << "Mais: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 895 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 94:
-#line 256 "parser.yy"
-     { std::cout << "E: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 102:
+#line 289 "parser.yy"
+             { std::cout << "Menos: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 901 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 95:
-#line 258 "parser.yy"
-       { std::cout << "Ou: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 103:
+#line 291 "parser.yy"
+                 { std::cout << "Produto: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 907 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 96:
-#line 260 "parser.yy"
-                       { std::cout << "Atribuicao: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 104:
+#line 293 "parser.yy"
+             { std::cout << "Barra: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 913 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 97:
-#line 262 "parser.yy"
-             { std::cout << "Igual: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 105:
+#line 295 "parser.yy"
+                         { std::cout << "Compara <>: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 919 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 98:
-#line 264 "parser.yy"
-                 { std::cout << "Compara: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 106:
+#line 297 "parser.yy"
+             { std::cout << "Menor: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 925 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
-  case 99:
-#line 266 "parser.yy"
-                   { std::cout << "Ternaria: " << *(yystack_[0].value.stringVal) << std::endl; }
+  case 107:
+#line 299 "parser.yy"
+                       { std::cout << "Menor Igual: " << *(yystack_[0].value.stringVal) << std::endl; }
 #line 931 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
     break;
 
+  case 108:
+#line 301 "parser.yy"
+             { std::cout << "Maior: " << *(yystack_[0].value.stringVal) << std::endl; }
+#line 937 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
+    break;
 
-#line 935 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
+  case 109:
+#line 303 "parser.yy"
+                       { std::cout << "Maior Igual: " << *(yystack_[0].value.stringVal) << std::endl; }
+#line 943 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
+    break;
+
+  case 110:
+#line 305 "parser.yy"
+     { std::cout << "E: " << *(yystack_[0].value.stringVal) << std::endl; }
+#line 949 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
+    break;
+
+  case 111:
+#line 307 "parser.yy"
+       { std::cout << "Ou: " << *(yystack_[0].value.stringVal) << std::endl; }
+#line 955 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
+    break;
+
+  case 112:
+#line 309 "parser.yy"
+                       { std::cout << "Atribuicao: " << *(yystack_[0].value.stringVal) << std::endl; }
+#line 961 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
+    break;
+
+  case 113:
+#line 311 "parser.yy"
+             { std::cout << "Igual: " << *(yystack_[0].value.stringVal) << std::endl; }
+#line 967 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
+    break;
+
+  case 114:
+#line 313 "parser.yy"
+                 { std::cout << "Compara: " << *(yystack_[0].value.stringVal) << std::endl; }
+#line 973 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
+    break;
+
+  case 115:
+#line 315 "parser.yy"
+                   { std::cout << "Ternaria: " << *(yystack_[0].value.stringVal) << std::endl; }
+#line 979 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
+    break;
+
+
+#line 983 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
 
             default:
               break;
@@ -1209,41 +1257,47 @@ namespace Simples {
   const signed char
   Parser::yypact_[] =
   {
-      -4,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,
+      -4,    -5,    -5,    76,    -5,    -5,    -5,    -5,    -5,    -5,
       -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,
       -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,
       -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,
       -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,
-      97,    -4,    -4,    -4,    -4,    -4,    -4,    -4,    -4,    -4,
+      -5,    -5,    -5,    -5,    -5,    -5,    -5,   113,    -4,    -4,
       -4,    -4,    -4,    -4,    -4,    -4,    -4,    -4,    -4,    -4,
       -4,    -4,    -4,    -4,    -4,    -4,    -4,    -4,    -4,    -4,
       -4,    -4,    -4,    -4,    -4,    -4,    -4,    -4,    -4,    -4,
-      -4,    -4,    -4,    -4,    -4,    -4,    -4,    -4,    -4,    -5,
+      -4,    -4,    -4,    -4,    -4,    -4,    -4,    -4,    -4,    -4,
+      -4,    -4,    -4,    -4,    -4,    -4,    -4,    -4,    -4,    -4,
+      -4,    -4,    -4,    -4,    90,    -5,    -5,    -5,    -5,    -5,
       -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,
       -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,
       -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,
       -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,
-      -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5
+      -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,
+      -5,    -5,    59,   112,    -5
   };
 
   const signed char
   Parser::yydefact_[] =
   {
-       2,    51,    52,    53,    54,    55,    56,    57,    58,    59,
-      60,    61,    62,    63,    64,    65,    66,    67,    68,    69,
-      70,    71,    72,    73,    74,    75,    76,    77,    78,    79,
-      80,    81,    82,    83,    84,    85,    86,    87,    88,    89,
-      90,    91,    92,    93,    94,    95,    96,    97,    98,    99,
-       0,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+       2,    60,    61,    62,    63,    64,    65,    66,    67,    68,
+      69,    70,    71,    72,    73,    74,    75,    76,    77,    78,
+      79,    80,    81,    82,    83,    84,    85,    86,    87,    88,
+      89,    90,    91,    92,    93,    94,    95,    96,    97,    98,
+      99,   100,   101,   102,   103,   104,   105,   106,   107,   108,
+     109,   110,   111,   112,   113,   114,   115,     0,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
-       2,     2,     2,     2,     2,     2,     2,     2,     2,     1,
-       3,     4,     5,     6,     7,     8,     9,    10,    11,    12,
-      13,    14,    15,    16,    17,    18,    19,    20,    21,    22,
-      23,    24,    25,    26,    27,    28,    29,    30,    31,    32,
-      33,    34,    35,    36,    37,    38,    39,    40,    41,    42,
-      43,    44,    45,    46,    47,    48,    49,    50
+       2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+       2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+       2,     2,     2,     2,     0,     1,    58,     3,     4,     5,
+       6,     7,     8,     9,    10,    11,    12,    13,    14,    15,
+      16,    17,    18,    19,    20,    21,    22,    23,    24,    25,
+      26,    27,    28,    29,    30,    31,    32,    33,    34,    35,
+      36,    37,    38,    39,    40,    41,    42,    43,    44,    45,
+      46,    47,    48,    49,    50,    51,    52,    53,    54,    55,
+      56,    57,     0,     0,    59
   };
 
   const signed char
@@ -1253,17 +1307,19 @@ namespace Simples {
       -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,
       -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,
       -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,
-      -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5
+      -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5,
+      -5,    -5,    -5,    -5,    -5,    -5,    -5,    -5
   };
 
   const signed char
   Parser::yydefgoto_[] =
   {
-      -1,    50,    51,    52,    53,    54,    55,    56,    57,    58,
-      59,    60,    61,    62,    63,    64,    65,    66,    67,    68,
-      69,    70,    71,    72,    73,    74,    75,    76,    77,    78,
-      79,    80,    81,    82,    83,    84,    85,    86,    87,    88,
-      89,    90,    91,    92,    93,    94,    95,    96,    97,    98
+      -1,    57,    58,    59,    60,    61,    62,    63,    64,    65,
+      66,    67,    68,    69,    70,    71,    72,    73,    74,    75,
+      76,    77,    78,    79,    80,    81,    82,    83,    84,    85,
+      86,    87,    88,    89,    90,    91,    92,    93,    94,    95,
+      96,    97,    98,    99,   100,   101,   102,   103,   104,   105,
+     106,   107,   108,   109,   110,   111,   112,   113
   };
 
   const unsigned char
@@ -1273,12 +1329,14 @@ namespace Simples {
       11,    12,    13,    14,    15,    16,    17,    18,    19,    20,
       21,    22,    23,    24,    25,    26,    27,    28,    29,    30,
       31,    32,    33,    34,    35,    36,    37,    38,    39,    40,
-      41,    42,    43,    44,    45,    46,    47,    48,    49,   100,
-     101,   102,   103,   104,   105,   106,   107,   108,   109,   110,
-     111,   112,   113,   114,   115,   116,   117,   118,   119,   120,
-     121,   122,   123,   124,   125,   126,   127,   128,   129,   130,
-     131,   132,   133,   134,   135,   136,   137,   138,   139,   140,
-     141,   142,   143,   144,   145,   146,   147,    99
+      41,    42,    43,    44,    45,    46,    47,    48,    49,    50,
+      51,    52,    53,    54,    55,    56,   116,   117,   118,   119,
+     120,   121,   122,   123,   124,   125,   126,   127,   128,   129,
+     130,   131,   132,   133,   134,   135,   136,   137,   138,   139,
+     140,   141,   142,   143,   144,   145,   146,   147,   148,   149,
+     150,   151,   152,   153,   154,   155,   156,   157,   158,   159,
+     160,   161,   162,   163,   164,   165,   166,   167,   168,   169,
+     170,   171,   114,   115,   172,   173,   174
   };
 
   const signed char
@@ -1288,12 +1346,14 @@ namespace Simples {
       14,    15,    16,    17,    18,    19,    20,    21,    22,    23,
       24,    25,    26,    27,    28,    29,    30,    31,    32,    33,
       34,    35,    36,    37,    38,    39,    40,    41,    42,    43,
-      44,    45,    46,    47,    48,    49,    50,    51,    52,    51,
-      52,    53,    54,    55,    56,    57,    58,    59,    60,    61,
+      44,    45,    46,    47,    48,    49,    50,    51,    52,    53,
+      54,    55,    56,    57,    58,    59,    58,    59,    60,    61,
       62,    63,    64,    65,    66,    67,    68,    69,    70,    71,
       72,    73,    74,    75,    76,    77,    78,    79,    80,    81,
       82,    83,    84,    85,    86,    87,    88,    89,    90,    91,
-      92,    93,    94,    95,    96,    97,    98,     0
+      92,    93,    94,    95,    96,    97,    98,    99,   100,   101,
+     102,   103,   104,   105,   106,   107,   108,   109,   110,   111,
+     112,   113,    36,     0,    24,    56,     4
   };
 
   const signed char
@@ -1304,31 +1364,36 @@ namespace Simples {
       23,    24,    25,    26,    27,    28,    29,    30,    31,    32,
       33,    34,    35,    36,    37,    38,    39,    40,    41,    42,
       43,    44,    45,    46,    47,    48,    49,    50,    51,    52,
-      54,    55,    56,    57,    58,    59,    60,    61,    62,    63,
+      53,    54,    55,    56,    57,    58,    59,    61,    62,    63,
       64,    65,    66,    67,    68,    69,    70,    71,    72,    73,
       74,    75,    76,    77,    78,    79,    80,    81,    82,    83,
       84,    85,    86,    87,    88,    89,    90,    91,    92,    93,
-      94,    95,    96,    97,    98,    99,   100,   101,   102,     0,
-      54,    54,    54,    54,    54,    54,    54,    54,    54,    54,
-      54,    54,    54,    54,    54,    54,    54,    54,    54,    54,
-      54,    54,    54,    54,    54,    54,    54,    54,    54,    54,
-      54,    54,    54,    54,    54,    54,    54,    54,    54,    54,
-      54,    54,    54,    54,    54,    54,    54,    54
+      94,    95,    96,    97,    98,    99,   100,   101,   102,   103,
+     104,   105,   106,   107,   108,   109,   110,   111,   112,   113,
+     114,   115,   116,   117,    36,     0,    61,    61,    61,    61,
+      61,    61,    61,    61,    61,    61,    61,    61,    61,    61,
+      61,    61,    61,    61,    61,    61,    61,    61,    61,    61,
+      61,    61,    61,    61,    61,    61,    61,    61,    61,    61,
+      61,    61,    61,    61,    61,    61,    61,    61,    61,    61,
+      61,    61,    61,    61,    61,    61,    61,    61,    61,    61,
+      61,    61,    24,    56,     4
   };
 
   const signed char
   Parser::yyr1_[] =
   {
-       0,    53,    54,    54,    54,    54,    54,    54,    54,    54,
-      54,    54,    54,    54,    54,    54,    54,    54,    54,    54,
-      54,    54,    54,    54,    54,    54,    54,    54,    54,    54,
-      54,    54,    54,    54,    54,    54,    54,    54,    54,    54,
-      54,    54,    54,    54,    54,    54,    54,    54,    54,    54,
-      54,    55,    55,    56,    57,    58,    59,    60,    61,    62,
-      63,    64,    65,    66,    67,    68,    69,    70,    71,    72,
-      73,    74,    75,    76,    77,    78,    79,    80,    81,    82,
-      83,    84,    85,    86,    87,    88,    89,    90,    91,    92,
-      93,    94,    95,    96,    97,    98,    99,   100,   101,   102
+       0,    60,    61,    61,    61,    61,    61,    61,    61,    61,
+      61,    61,    61,    61,    61,    61,    61,    61,    61,    61,
+      61,    61,    61,    61,    61,    61,    61,    61,    61,    61,
+      61,    61,    61,    61,    61,    61,    61,    61,    61,    61,
+      61,    61,    61,    61,    61,    61,    61,    61,    61,    61,
+      61,    61,    61,    61,    61,    61,    61,    61,    61,    62,
+      63,    63,    64,    65,    66,    67,    68,    69,    70,    71,
+      72,    73,    74,    75,    76,    77,    78,    79,    80,    81,
+      82,    83,    84,    85,    86,    87,    88,    89,    90,    91,
+      92,    93,    94,    95,    96,    97,    98,    99,   100,   101,
+     102,   103,   104,   105,   106,   107,   108,   109,   110,   111,
+     112,   113,   114,   115,   116,   117
   };
 
   const signed char
@@ -1339,11 +1404,13 @@ namespace Simples {
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
-       2,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+       2,     2,     2,     2,     2,     2,     2,     2,     2,     5,
        1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
        1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
        1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
-       1,     1,     1,     1,     1,     1,     1,     1,     1,     1
+       1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+       1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+       1,     1,     1,     1,     1,     1
   };
 
 
@@ -1356,39 +1423,44 @@ namespace Simples {
   "\"end of file\"", "error", "$undefined", "\"end of line\"",
   "\"integer\"", "\"real\"", "\"identifier\"", "\"cadeia\"", "\"pare\"",
   "\"comentario\"", "\"para\"", "\"tipo cadeia\"", "\"de\"",
-  "\"enquanto\"", "\"faca\"", "\"falso\"", "\"fim\"", "\"fun\"",
-  "\"continue\"", "\"inicio\"", "\"inteiro\"", "\"limite\"", "\"nulo\"",
-  "\"ref\"", "\"retorne\"", "\"se\"", "\"var\"", "\"verdadeiro\"",
-  "\"virgula\"", "\"doisPontos\"", "\"pontoVirgula\"",
+  "\"enquanto\"", "\"fenquanto\"", "\"faça\"", "\"falso\"", "\"fim\"",
+  "\"fpara\"", "\"fse\"", "\"fun\"", "\"global\"", "\"continue\"",
+  "\"início\"", "\"inteiro\"", "\"limite\"", "\"local\"", "\"nulo\"",
+  "\"ref\"", "\"retorne\"", "\"se\"", "\"tipo\"", "\"var\"", "\"valor\"",
+  "\"verdadeiro\"", "\"virgula\"", "\"doisPontos\"", "\"pontoVirgula\"",
   "\"abreParenteses\"", "\"fechaParenteses\"", "\"abreColchete\"",
   "\"fechaColchete\"", "\"abreChave\"", "\"fechaChave\"", "\"ponto\"",
   "\"mais\"", "\"menos\"", "\"produto\"", "\"barra\"", "\"comparaSeta\"",
   "\"menor\"", "\"menorIgual\"", "\"maior\"", "\"maiorIgual\"", "\"e\"",
   "\"ou\"", "\"atribuicao\"", "\"igual\"", "\"compara\"", "\"ternaria\"",
-  "$accept", "program", "constant", "variable", "cadeia", "pare",
-  "comentario", "para", "cadeiaresv", "de", "enquanto", "faca", "falso",
-  "fim", "fun", "continue", "inicio", "inteiro", "limite", "nulo", "ref",
-  "retorne", "se", "var", "verdadeiro", "virgula", "doisPontos",
-  "pontoVirgula", "abreParenteses", "fechaParenteses", "abreColchete",
-  "fechaColchete", "abreChave", "fechaChave", "ponto", "mais", "menos",
-  "produto", "barra", "comparaSeta", "menor", "menorIgual", "maior",
-  "maiorIgual", "e", "ou", "atribuicao", "igual", "compara", "ternaria", YY_NULLPTR
+  "$accept", "program", "declaracao_variavel", "constant", "variable",
+  "cadeia", "pare", "comentario", "para", "cadeiaresv", "de", "enquanto",
+  "fenquanto", "faca", "falso", "fim", "fpara", "fse", "fun", "global",
+  "continue", "inicio", "inteiro", "limite", "local", "nulo", "ref",
+  "retorne", "se", "tipo", "var", "valor", "verdadeiro", "virgula",
+  "doisPontos", "pontoVirgula", "abreParenteses", "fechaParenteses",
+  "abreColchete", "fechaColchete", "abreChave", "fechaChave", "ponto",
+  "mais", "menos", "produto", "barra", "comparaSeta", "menor",
+  "menorIgual", "maior", "maiorIgual", "e", "ou", "atribuicao", "igual",
+  "compara", "ternaria", YY_NULLPTR
   };
 
 #if YYDEBUG
   const short
   Parser::yyrline_[] =
   {
-       0,   121,   121,   122,   123,   124,   125,   126,   127,   128,
-     129,   130,   131,   132,   133,   134,   135,   136,   137,   138,
-     139,   140,   141,   142,   143,   144,   145,   146,   147,   148,
-     149,   150,   151,   152,   153,   154,   155,   156,   157,   158,
-     159,   160,   161,   162,   163,   164,   165,   166,   167,   168,
-     169,   171,   172,   174,   176,   178,   180,   182,   184,   186,
-     188,   190,   192,   194,   196,   198,   200,   202,   204,   206,
-     208,   210,   212,   214,   216,   218,   220,   222,   224,   226,
-     228,   230,   232,   234,   236,   238,   240,   242,   244,   246,
-     248,   250,   252,   254,   256,   258,   260,   262,   264,   266
+       0,   128,   128,   129,   130,   131,   132,   133,   134,   135,
+     136,   137,   138,   139,   140,   141,   142,   143,   144,   145,
+     146,   147,   148,   149,   150,   151,   152,   153,   154,   155,
+     156,   157,   158,   159,   160,   161,   162,   163,   164,   165,
+     166,   167,   168,   169,   170,   171,   172,   173,   174,   175,
+     176,   177,   178,   179,   180,   181,   182,   183,   184,   188,
+     206,   207,   209,   211,   213,   215,   217,   219,   221,   223,
+     225,   227,   229,   231,   233,   235,   237,   239,   241,   243,
+     245,   247,   249,   251,   253,   255,   257,   259,   261,   263,
+     265,   267,   269,   271,   273,   275,   277,   279,   281,   283,
+     285,   287,   289,   291,   293,   295,   297,   299,   301,   303,
+     305,   307,   309,   311,   313,   315
   };
 
   // Print the state stack on the debug stream.
@@ -1459,9 +1531,10 @@ namespace Simples {
       15,    16,    17,    18,    19,    20,    21,    22,    23,    24,
       25,    26,    27,    28,    29,    30,    31,    32,    33,    34,
       35,    36,    37,    38,    39,    40,    41,    42,    43,    44,
-      45,    46,    47,    48,    49,    50,    51,    52
+      45,    46,    47,    48,    49,    50,    51,    52,    53,    54,
+      55,    56,    57,    58,    59
     };
-    const int user_token_number_max_ = 307;
+    const int user_token_number_max_ = 314;
 
     if (t <= 0)
       return yyeof_;
@@ -1473,9 +1546,9 @@ namespace Simples {
 
 #line 44 "parser.yy"
 } // Simples
-#line 1477 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
+#line 1550 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.cc"
 
-#line 267 "parser.yy"
+#line 316 "parser.yy"
 
 
 namespace Simples {

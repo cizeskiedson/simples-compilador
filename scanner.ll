@@ -99,14 +99,36 @@ eol     [\n\r]+
   return token::FALSO;
 }
 
+"fenquanto" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::FENQUANTO;
+} 
+
+
 "fim" {
   yylval->stringVal = new std::string(yytext, yyleng);
   return token::FIM;
 }
 
+"fpara" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::FPARA;
+}
+
+"fse" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::FSE;
+}
+
+
 "fun" {
   yylval->stringVal = new std::string(yytext, yyleng);
   return token::FUN;
+}
+
+"global" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::GLOBAL;
 }
 
 
@@ -123,6 +145,11 @@ eol     [\n\r]+
 "limite" {
   yylval->stringVal = new std::string(yytext, yyleng);
   return token::LIMITE;
+}
+
+"local" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::LOCAL;
 }
 
 
@@ -156,9 +183,19 @@ eol     [\n\r]+
   return token::SE;
 }
 
+"tipo" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::TIPO;
+}
+
 "var" {
   yylval->stringVal = new std::string(yytext, yyleng);
   return token::VAR;
+}
+
+"valor" {
+  yylval->stringVal = new std::string(yytext, yyleng);
+  return token::VALOR;
 }
 
 "verdadeiro" {

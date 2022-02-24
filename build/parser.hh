@@ -245,45 +245,52 @@ namespace Simples {
         CADEIARESV = 266,
         DE = 267,
         ENQUANTO = 268,
-        FACA = 269,
-        FALSO = 270,
-        FIM = 271,
-        FUN = 272,
-        CONTINUE = 273,
-        INICIO = 274,
-        INTEIRO = 275,
-        LIMITE = 276,
-        NULO = 277,
-        REF = 278,
-        RETORNE = 279,
-        SE = 280,
-        VAR = 281,
-        VERDADEIRO = 282,
-        VIRGULA = 283,
-        DOISPONTOS = 284,
-        PONTOVIRGULA = 285,
-        ABREPARENTESES = 286,
-        FECHAPARENTESES = 287,
-        ABRECOLCHETE = 288,
-        FECHACOLCHETE = 289,
-        ABRECHAVE = 290,
-        FECHACHAVE = 291,
-        PONTO = 292,
-        MAIS = 293,
-        MENOS = 294,
-        PRODUTO = 295,
-        BARRA = 296,
-        COMPARASETA = 297,
-        MENOR = 298,
-        MENORIGUAL = 299,
-        MAIOR = 300,
-        MAIORIGUAL = 301,
-        E = 302,
-        OU = 303,
-        ATRIBUICAO = 304,
-        IGUAL = 305,
-        COMPARA = 306,
-        TERNARIA = 307
+        FENQUANTO = 269,
+        FACA = 270,
+        FALSO = 271,
+        FIM = 272,
+        FPARA = 273,
+        FSE = 274,
+        FUN = 275,
+        GLOBAL = 276,
+        CONTINUE = 277,
+        INICIO = 278,
+        INTEIRO = 279,
+        LIMITE = 280,
+        LOCAL = 281,
+        NULO = 282,
+        REF = 283,
+        RETORNE = 284,
+        SE = 285,
+        TIPO = 286,
+        VAR = 287,
+        VALOR = 288,
+        VERDADEIRO = 289,
+        VIRGULA = 290,
+        DOISPONTOS = 291,
+        PONTOVIRGULA = 292,
+        ABREPARENTESES = 293,
+        FECHAPARENTESES = 294,
+        ABRECOLCHETE = 295,
+        FECHACOLCHETE = 296,
+        ABRECHAVE = 297,
+        FECHACHAVE = 298,
+        PONTO = 299,
+        MAIS = 300,
+        MENOS = 301,
+        PRODUTO = 302,
+        BARRA = 303,
+        COMPARASETA = 304,
+        MENOR = 305,
+        MENORIGUAL = 306,
+        MAIOR = 307,
+        MAIORIGUAL = 308,
+        E = 309,
+        OU = 310,
+        ATRIBUICAO = 311,
+        IGUAL = 312,
+        COMPARA = 313,
+        TERNARIA = 314
       };
     };
 
@@ -744,10 +751,10 @@ namespace Simples {
     enum
     {
       yyeof_ = 0,
-      yylast_ = 97,     ///< Last index in yytable_.
-      yynnts_ = 50,  ///< Number of nonterminal symbols.
-      yyfinal_ = 99, ///< Termination state number.
-      yyntokens_ = 53  ///< Number of tokens.
+      yylast_ = 116,     ///< Last index in yytable_.
+      yynnts_ = 58,  ///< Number of nonterminal symbols.
+      yyfinal_ = 115, ///< Termination state number.
+      yyntokens_ = 60  ///< Number of tokens.
     };
 
 
@@ -758,7 +765,7 @@ namespace Simples {
 
 #line 44 "parser.yy"
 } // Simples
-#line 762 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.hh"
+#line 769 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.hh"
 
 
 
@@ -774,7 +781,7 @@ namespace Simples {
     }
   }
 
-#line 778 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.hh"
+#line 785 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.hh"
 
 
 #endif // !YY_YY_HOME_EDSON_DOCUMENTS_UEM_COMPILADORES_SIMPLES_COMPILADOR_BUILD_PARSER_HH_INCLUDED

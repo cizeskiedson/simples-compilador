@@ -76,19 +76,26 @@
 %token <stringVal>  CADEIARESV    "tipo cadeia" 
 %token <stringVal>  DE            "de"
 %token <stringVal>  ENQUANTO      "enquanto"
-%token <stringVal>  FACA          "faca"
+%token <stringVal>  FENQUANTO     "fenquanto"
+%token <stringVal>  FACA          "faça"
 %token <stringVal>  FALSO         "falso"
 %token <stringVal>  FIM           "fim"
+%token <stringVal>  FPARA         "fpara"
+%token <stringVal>  FSE           "fse"
 %token <stringVal>  FUN           "fun"
+%token <stringVal>  GLOBAL        "global"
 %token <stringVal>  CONTINUE      "continue"
-%token <stringVal>  INICIO        "inicio"
+%token <stringVal>  INICIO        "início"
 %token <stringVal>  INTEIRO       "inteiro"
 %token <stringVal>  LIMITE        "limite"
+%token <stringVal>  LOCAL        "local"
 %token <stringVal>  NULO          "nulo"
 %token <stringVal>  REF           "ref"
 %token <stringVal>  RETORNE       "retorne"
 %token <stringVal>  SE            "se"
+%token <stringVal>  TIPO          "tipo"
 %token <stringVal>  VAR           "var"
+%token <stringVal>  VALOR         "valor"
 %token <stringVal>  VERDADEIRO    "verdadeiro"
 %token <stringVal>  VIRGULA       "virgula"
 %token <stringVal>  DOISPONTOS    "doisPontos"
@@ -128,19 +135,26 @@ program:  /* empty */
         | cadeiaresv program
         | de program
         | enquanto program
+        | fenquanto program
         | faca program
         | falso program
         | fim program
+        | fpara program
+        | fse program
         | fun program
+        | global program
         | continue program
         | inicio program
         | inteiro program
         | limite program
+        | local program
         | nulo program
         | ref program
         | retorne program
         | se program
+        | tipo program
         | var program
+        | valor program
         | verdadeiro program
         | virgula program
         | doisPontos program
@@ -167,6 +181,27 @@ program:  /* empty */
         | igual program
         | compara program
         | ternaria program
+        | declaracao_variavel program
+
+/*VARIÁVEIS*/
+declaracao_variavel: 
+      IDENTIFIER DOISPONTOS INTEIRO ATRIBUICAO INTEGER {std::cout << "TESTE VARIAVEL DECLARADA" <<std::endl;}
+
+
+/*EXPRESSÕES
+expr: expressao_logica
+      | expressao_relacional
+      | expressao_aritmetica
+      | criacao_de_registro
+      | nulo
+      | expressao_com_parenteses
+      | chamada_de_funcao
+      | local_de_armazenamento
+      | literal
+
+expressao_logica: variable E variable 
+                  | variable OU variable
+*/
 
 constant : INTEGER { std::cout << "Inteiro: " << $1 << std::endl; }
          | REAL  { std::cout << "Real: " << $1 << std::endl; }
@@ -187,13 +222,21 @@ de: DE { std::cout << "Cadeia Tipo: " << *$1 << std::endl; }
 
 enquanto: ENQUANTO { std::cout << "Enquanto: " << *$1 << std::endl; }
 
+fenquanto: FENQUANTO { std::cout << "FEnquanto: " << *$1 << std::endl; }
+
 faca: FACA { std::cout << "Faca: " << *$1 << std::endl; }
 
 falso: FALSO { std::cout << "Falso: " << *$1 << std::endl; }
 
 fim: FIM { std::cout << "Fim: " << *$1 << std::endl; }
 
+fpara: FPARA { std::cout << "Fpara: " << *$1 << std::endl; }
+
+fse: FSE { std::cout << "Fse: " << *$1 << std::endl; }
+
 fun: FUN { std::cout << "Fun: " << *$1 << std::endl; }
+
+global: GLOBAL { std::cout << "Global: " << *$1 << std::endl; }
 
 continue: CONTINUE { std::cout << "Continue: " << *$1 << std::endl; }
 
@@ -203,6 +246,8 @@ inteiro: INTEIRO { std::cout << "Inteiro: " << *$1 << std::endl; }
 
 limite: LIMITE { std::cout << "Limite: " << *$1 << std::endl; }
 
+local: LOCAL { std::cout << "Local: " << *$1 << std::endl; }
+
 nulo: NULO { std::cout << "Nulo: " << *$1 << std::endl; }
 
 ref: REF { std::cout << "Ref: " << *$1 << std::endl; }
@@ -211,7 +256,11 @@ retorne: RETORNE { std::cout << "Retorne: " << *$1 << std::endl; }
 
 se: SE { std::cout << "Se: " << *$1 << std::endl; }
 
+tipo: TIPO { std::cout << "Tipo: " << *$1 << std::endl; }
+
 var: VAR { std::cout << "Var: " << *$1 << std::endl; }
+
+valor: VALOR { std::cout << "Valor: " << *$1 << std::endl; }
 
 verdadeiro: VERDADEIRO { std::cout << "Verdadeiro: " << *$1 << std::endl; }
 
