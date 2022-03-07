@@ -242,55 +242,53 @@ namespace Simples {
         PARE = 263,
         COMENTARIO = 264,
         PARA = 265,
-        CADEIARESV = 266,
-        DE = 267,
-        ENQUANTO = 268,
-        FENQUANTO = 269,
-        FACA = 270,
-        FALSO = 271,
-        FIM = 272,
-        FPARA = 273,
-        FSE = 274,
-        FUN = 275,
-        GLOBAL = 276,
-        CONTINUE = 277,
-        INICIO = 278,
-        INTEIRO = 279,
-        LIMITE = 280,
-        LOCAL = 281,
-        NULO = 282,
-        REF = 283,
-        RETORNE = 284,
-        SE = 285,
-        TIPO = 286,
-        VAR = 287,
-        VALOR = 288,
-        VERDADEIRO = 289,
-        VIRGULA = 290,
-        DOISPONTOS = 291,
-        PONTOVIRGULA = 292,
-        ABREPARENTESES = 293,
-        FECHAPARENTESES = 294,
-        ABRECOLCHETE = 295,
-        FECHACOLCHETE = 296,
-        ABRECHAVE = 297,
-        FECHACHAVE = 298,
-        PONTO = 299,
-        MAIS = 300,
-        MENOS = 301,
-        PRODUTO = 302,
-        BARRA = 303,
-        COMPARASETA = 304,
-        MENOR = 305,
-        MENORIGUAL = 306,
-        MAIOR = 307,
-        MAIORIGUAL = 308,
-        E = 309,
-        OU = 310,
-        ATRIBUICAO = 311,
-        IGUAL = 312,
-        COMPARA = 313,
-        TERNARIA = 314
+        DE = 266,
+        ENQUANTO = 267,
+        FENQUANTO = 268,
+        FACA = 269,
+        FALSO = 270,
+        FIM = 271,
+        FPARA = 272,
+        FSE = 273,
+        FUN = 274,
+        GLOBAL = 275,
+        CONTINUE = 276,
+        INICIO = 277,
+        LIMITE = 278,
+        LOCAL = 279,
+        NULO = 280,
+        REF = 281,
+        RETORNE = 282,
+        SE = 283,
+        TIPO = 284,
+        VAR = 285,
+        VALOR = 286,
+        VERDADEIRO = 287,
+        VIRGULA = 288,
+        DOISPONTOS = 289,
+        PONTOVIRGULA = 290,
+        ABREPARENTESES = 291,
+        FECHAPARENTESES = 292,
+        ABRECOLCHETE = 293,
+        FECHACOLCHETE = 294,
+        ABRECHAVE = 295,
+        FECHACHAVE = 296,
+        PONTO = 297,
+        MAIS = 298,
+        MENOS = 299,
+        PRODUTO = 300,
+        BARRA = 301,
+        COMPARASETA = 302,
+        MENOR = 303,
+        MENORIGUAL = 304,
+        MAIOR = 305,
+        MAIORIGUAL = 306,
+        E = 307,
+        OU = 308,
+        ATRIBUICAO = 309,
+        IGUAL = 310,
+        COMPARA = 311,
+        TERNARIA = 312
       };
     };
 
@@ -453,7 +451,7 @@ namespace Simples {
     Parser& operator= (const Parser&);
 
     /// Stored state numbers (used for stacks).
-    typedef unsigned char state_type;
+    typedef signed char state_type;
 
     /// Generate an error message.
     /// \param yystate   the state where the error occurred.
@@ -501,7 +499,7 @@ namespace Simples {
     // YYTABLE[YYPACT[STATE-NUM]] -- What to do in state STATE-NUM.  If
     // positive, shift that token.  If negative, reduce the rule whose
     // number is the opposite.  If YYTABLE_NINF, syntax error.
-    static const unsigned char yytable_[];
+    static const signed char yytable_[];
 
     static const signed char yycheck_[];
 
@@ -524,7 +522,7 @@ namespace Simples {
     static const char* const yytname_[];
 #if YYDEBUG
     // YYRLINE[YYN] -- Source line where rule number YYN was defined.
-    static const short yyrline_[];
+    static const unsigned char yyrline_[];
     /// Report on the debug stream that the rule \a r is going to be reduced.
     virtual void yy_reduce_print_ (int r);
     /// Print the state stack on the debug stream.
@@ -751,10 +749,10 @@ namespace Simples {
     enum
     {
       yyeof_ = 0,
-      yylast_ = 116,     ///< Last index in yytable_.
-      yynnts_ = 58,  ///< Number of nonterminal symbols.
-      yyfinal_ = 115, ///< Termination state number.
-      yyntokens_ = 60  ///< Number of tokens.
+      yylast_ = 34,     ///< Last index in yytable_.
+      yynnts_ = 10,  ///< Number of nonterminal symbols.
+      yyfinal_ = 6, ///< Termination state number.
+      yyntokens_ = 58  ///< Number of tokens.
     };
 
 
@@ -765,7 +763,7 @@ namespace Simples {
 
 #line 44 "parser.yy"
 } // Simples
-#line 769 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.hh"
+#line 767 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.hh"
 
 
 
@@ -781,7 +779,7 @@ namespace Simples {
     }
   }
 
-#line 785 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.hh"
+#line 783 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.hh"
 
 
 #endif // !YY_YY_HOME_EDSON_DOCUMENTS_UEM_COMPILADORES_SIMPLES_COMPILADOR_BUILD_PARSER_HH_INCLUDED

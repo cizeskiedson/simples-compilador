@@ -1,1 +1,1 @@
-var i : inteiro := 0
+tipo : integerArray = [10] de inteiro

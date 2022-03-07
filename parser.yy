@@ -53,7 +53,7 @@
 /* use newer C++ skeleton file */
 %skeleton "lalr1.cc"
 /* Entry point of grammar */
-%start program
+%start programa
 
 %union
 {
@@ -70,122 +70,92 @@
 %token <doubleVal> 	REAL		      "real"
 %token <stringVal> 	IDENTIFIER    "identifier"
 %token <stringVal>  CADEIA        "cadeia"
-%token <stringVal>  PARE          "pare"
-%token <stringVal>  COMENTARIO    "comentario"
-%token <stringVal>  PARA          "para"
-%token <stringVal>  CADEIARESV    "tipo cadeia" 
-%token <stringVal>  DE            "de"
-%token <stringVal>  ENQUANTO      "enquanto"
-%token <stringVal>  FENQUANTO     "fenquanto"
-%token <stringVal>  FACA          "faça"
-%token <stringVal>  FALSO         "falso"
-%token <stringVal>  FIM           "fim"
-%token <stringVal>  FPARA         "fpara"
-%token <stringVal>  FSE           "fse"
-%token <stringVal>  FUN           "fun"
-%token <stringVal>  GLOBAL        "global"
-%token <stringVal>  CONTINUE      "continue"
-%token <stringVal>  INICIO        "início"
-%token <stringVal>  INTEIRO       "inteiro"
-%token <stringVal>  LIMITE        "limite"
-%token <stringVal>  LOCAL        "local"
-%token <stringVal>  NULO          "nulo"
-%token <stringVal>  REF           "ref"
-%token <stringVal>  RETORNE       "retorne"
-%token <stringVal>  SE            "se"
-%token <stringVal>  TIPO          "tipo"
-%token <stringVal>  VAR           "var"
-%token <stringVal>  VALOR         "valor"
-%token <stringVal>  VERDADEIRO    "verdadeiro"
-%token <stringVal>  VIRGULA       "virgula"
-%token <stringVal>  DOISPONTOS    "doisPontos"
-%token <stringVal>  PONTOVIRGULA    "pontoVirgula"
-%token <stringVal>  ABREPARENTESES    "abreParenteses"
-%token <stringVal>  FECHAPARENTESES    "fechaParenteses"
-%token <stringVal>  ABRECOLCHETE   "abreColchete"
-%token <stringVal>  FECHACOLCHETE    "fechaColchete"
-%token <stringVal>  ABRECHAVE    "abreChave"
-%token <stringVal>  FECHACHAVE   "fechaChave"
-%token <stringVal>  PONTO    "ponto"
-%token <stringVal>  MAIS    "mais"
-%token <stringVal>  MENOS    "menos"
-%token <stringVal>  PRODUTO   "produto"
-%token <stringVal>  BARRA   "barra"
-%token <stringVal>  COMPARASETA    "comparaSeta"
-%token <stringVal>  MENOR    "menor"
-%token <stringVal>  MENORIGUAL    "menorIgual"
-%token <stringVal>  MAIOR    "maior"
-%token <stringVal>  MAIORIGUAL   "maiorIgual"
-%token <stringVal>  E    "e"
-%token <stringVal>  OU    "ou"
-%token <stringVal>  ATRIBUICAO    "atribuicao"
-%token <stringVal>  IGUAL    "igual"
-%token <stringVal>  COMPARA    "compara"
-%token <stringVal>  TERNARIA   "ternaria"
+%token   PARE          "pare"
+%token   COMENTARIO    "comentario"
+%token   PARA          "para"
+%token   DE            "de"
+%token   ENQUANTO      "enquanto"
+%token   FENQUANTO     "fenquanto"
+%token   FACA          "faça"
+%token   FALSO         "falso"
+%token   FIM           "fim"
+%token   FPARA         "fpara"
+%token   FSE           "fse"
+%token   FUN           "fun"
+%token   GLOBAL        "global"
+%token   CONTINUE      "continue"
+%token   INICIO        "início"
+%token   LIMITE        "limite"
+%token   LOCAL        "local"
+%token   NULO          "nulo"
+%token   REF           "ref"
+%token   RETORNE       "retorne"
+%token   SE            "se"
+%token   TIPO          "tipo"
+%token   VAR           "var"
+%token   VALOR         "valor"
+%token   VERDADEIRO    "verdadeiro"
+%token   VIRGULA       "virgula"
+%token   DOISPONTOS    "doisPontos"
+%token   PONTOVIRGULA    "pontoVirgula"
+%token   ABREPARENTESES    "abreParenteses"
+%token   FECHAPARENTESES    "fechaParenteses"
+%token   ABRECOLCHETE   "abreColchete"
+%token   FECHACOLCHETE    "fechaColchete"
+%token   ABRECHAVE    "abreChave"
+%token   FECHACHAVE   "fechaChave"
+%token   PONTO    "ponto"
+%token   MAIS    "mais"
+%token   MENOS    "menos"
+%token   PRODUTO   "produto"
+%token   BARRA   "barra"
+%token   COMPARASETA    "comparaSeta"
+%token   MENOR    "menor"
+%token   MENORIGUAL    "menorIgual"
+%token   MAIOR    "maior"
+%token   MAIORIGUAL   "maiorIgual"
+%token   E    "e"
+%token   OU    "ou"
+%token   ATRIBUICAO    "atribuicao"
+%token   IGUAL    "igual"
+%token   COMPARA    "compara"
+%token   TERNARIA   "ternaria"
 
 %%
 
-program:  /* empty */
-        | constant program
-        | variable program
-        | cadeia program
-        | pare program
-        | comentario program
-        | para program
-        | cadeiaresv program
-        | de program
-        | enquanto program
-        | fenquanto program
-        | faca program
-        | falso program
-        | fim program
-        | fpara program
-        | fse program
-        | fun program
-        | global program
-        | continue program
-        | inicio program
-        | inteiro program
-        | limite program
-        | local program
-        | nulo program
-        | ref program
-        | retorne program
-        | se program
-        | tipo program
-        | var program
-        | valor program
-        | verdadeiro program
-        | virgula program
-        | doisPontos program
-        | pontoVirgula program
-        | abreParenteses program
-        | fechaParenteses program
-        | abreColchete program
-        | fechaColchete program
-        | abreChave program
-        | fechaChave program
-        | ponto program
-        | mais program
-        | menos program
-        | produto program
-        | barra program
-        | comparaSeta program
-        | menor program
-        | menorIgual program
-        | maior program
-        | maiorIgual program
-        | e program
-        | ou program
-        | atribuicao program
-        | igual program
-        | compara program
-        | ternaria program
-        | declaracao_variavel program
+
+programa: declaracoes {std::cout << "DECLARACOES" << std::endl; }
+
+declaracoes: lista_declaracao_de_tipo {std::cout << "COMECA A LISTA" << std::endl; }
+
+lista_declaracao_de_tipo: 
+            | TIPO DOISPONTOS lista_declaracao_tipo {std::cout << "ABRE DECLARACOES" <<std::endl;}
+
+lista_declaracao_tipo: declaracao_tipo {std::cout << "ACHEI UM TIPO " <<std::endl;}
+            |lista_declaracao_tipo declaracao_tipo {std::cout << "LOOP DECLARA TIPO" <<std::endl;}
+
+declaracao_tipo:
+            IDENTIFIER IGUAL descritor_tipo {std::cout << "DECLARA UM TIPO" <<std::endl;}
+
+descritor_tipo: 
+            IDENTIFIER {std::cout << "ID" <<std::endl;}
+            | ABRECHAVE tipo_campos FECHACHAVE {std::cout << "CAMPOS STRUCT" <<std::endl;}
+            | ABRECOLCHETE tipo_constantes FECHACOLCHETE DE IDENTIFIER {std::cout << "CONSTANTES" <<std::endl;}
+
+tipo_campos: tipo_campo {std::cout << "TIPO CAMPOS" <<std::endl;}
+            | tipo_campo VIRGULA tipo_campos
+
+tipo_campo: IDENTIFIER DOISPONTOS IDENTIFIER {std::cout << "TIPO CAMPO" <<std::endl;}
+
+tipo_constantes:
+        INTEGER {std::cout << "INTEIRO ARRAY" <<std::endl;}
+        | INTEGER VIRGULA tipo_constantes
+
+
 
 /*VARIÁVEIS*/
 declaracao_variavel: 
-      IDENTIFIER DOISPONTOS INTEIRO ATRIBUICAO INTEGER {std::cout << "TESTE VARIAVEL DECLARADA" <<std::endl;}
+      IDENTIFIER DOISPONTOS IDENTIFIER ATRIBUICAO INTEGER {std::cout << "TESTE VARIAVEL DECLARADA" <<std::endl;}
 
 
 /*EXPRESSÕES
@@ -206,113 +176,109 @@ expressao_logica: variable E variable
 constant : INTEGER { std::cout << "Inteiro: " << $1 << std::endl; }
          | REAL  { std::cout << "Real: " << $1 << std::endl; }
 
-variable : IDENTIFIER {  std::cout << "Identificador: " << *$1 << std::endl; }
+variable : IDENTIFIER {  std::cout << "Identificador: " << $1 << std::endl; }
 
-cadeia:   CADEIA  { std::cout << "Cadeia: " << *$1 << std::endl;  }
+cadeia:   CADEIA  { std::cout << "Cadeia: " << $1 << std::endl;  }
 
-pare: PARE  { std::cout << "Pare: " << *$1 << std::endl;  }
+pare: PARE  { std::cout << "Pare: "  << std::endl;  }
 
-comentario: COMENTARIO { std::cout << "Comentario: " << *$1 << std::endl; }
+comentario: COMENTARIO { std::cout << "Comentario: " << std::endl; }
 
-para: PARA  { std::cout << "Para: " << *$1 << std::endl; }
+para: PARA  { std::cout << "Para: " << std::endl; }
 
-cadeiaresv: CADEIARESV  { std::cout << "Cadeia Tipo: " << *$1 << std::endl; }
+de: DE { std::cout << "Cadeia Tipo: " << std::endl; }
 
-de: DE { std::cout << "Cadeia Tipo: " << *$1 << std::endl; }
+enquanto: ENQUANTO { std::cout << "Enquanto: " << std::endl; }
 
-enquanto: ENQUANTO { std::cout << "Enquanto: " << *$1 << std::endl; }
+fenquanto: FENQUANTO { std::cout << "FEnquanto: " << std::endl; }
 
-fenquanto: FENQUANTO { std::cout << "FEnquanto: " << *$1 << std::endl; }
+faca: FACA { std::cout << "Faca: " << std::endl; }
 
-faca: FACA { std::cout << "Faca: " << *$1 << std::endl; }
+falso: FALSO { std::cout << "Falso: " << std::endl; }
 
-falso: FALSO { std::cout << "Falso: " << *$1 << std::endl; }
+fim: FIM { std::cout << "Fim: " << std::endl; }
 
-fim: FIM { std::cout << "Fim: " << *$1 << std::endl; }
+fpara: FPARA { std::cout << "Fpara: " << std::endl; }
 
-fpara: FPARA { std::cout << "Fpara: " << *$1 << std::endl; }
+fse: FSE { std::cout << "Fse: " << std::endl; }
 
-fse: FSE { std::cout << "Fse: " << *$1 << std::endl; }
+fun: FUN { std::cout << "Fun: " << std::endl; }
 
-fun: FUN { std::cout << "Fun: " << *$1 << std::endl; }
+global: GLOBAL { std::cout << "Global: " << std::endl; }
 
-global: GLOBAL { std::cout << "Global: " << *$1 << std::endl; }
+continue: CONTINUE { std::cout << "Continue: " << std::endl; }
 
-continue: CONTINUE { std::cout << "Continue: " << *$1 << std::endl; }
+inicio: INICIO { std::cout << "Inicio: " << std::endl; }
 
-inicio: INICIO { std::cout << "Inicio: " << *$1 << std::endl; }
+limite: LIMITE { std::cout << "Limite: " << std::endl; }
 
-inteiro: INTEIRO { std::cout << "Inteiro: " << *$1 << std::endl; }
+local: LOCAL { std::cout << "Local: " << std::endl; }
 
-limite: LIMITE { std::cout << "Limite: " << *$1 << std::endl; }
+nulo: NULO { std::cout << "Nulo: " << std::endl; }
 
-local: LOCAL { std::cout << "Local: " << *$1 << std::endl; }
+ref: REF { std::cout << "Ref: " << std::endl; }
 
-nulo: NULO { std::cout << "Nulo: " << *$1 << std::endl; }
+retorne: RETORNE { std::cout << "Retorne: " << std::endl; }
 
-ref: REF { std::cout << "Ref: " << *$1 << std::endl; }
+se: SE { std::cout << "Se: " << std::endl; }
 
-retorne: RETORNE { std::cout << "Retorne: " << *$1 << std::endl; }
+tipo: TIPO { std::cout << "Tipo: " << std::endl; }
 
-se: SE { std::cout << "Se: " << *$1 << std::endl; }
+var: VAR { std::cout << "Var: " << std::endl; }
 
-tipo: TIPO { std::cout << "Tipo: " << *$1 << std::endl; }
+valor: VALOR { std::cout << "Valor: " << std::endl; }
 
-var: VAR { std::cout << "Var: " << *$1 << std::endl; }
+verdadeiro: VERDADEIRO { std::cout << "Verdadeiro: " << std::endl; }
 
-valor: VALOR { std::cout << "Valor: " << *$1 << std::endl; }
+virgula: VIRGULA { std::cout << "Virgula: " << std::endl; }
 
-verdadeiro: VERDADEIRO { std::cout << "Verdadeiro: " << *$1 << std::endl; }
+doisPontos: DOISPONTOS { std::cout << "Dois Pontos: " << std::endl; }
 
-virgula: VIRGULA { std::cout << "Virgula: " << *$1 << std::endl; }
+pontoVirgula: PONTOVIRGULA { std::cout << "Ponto e Virgula: " << std::endl; }
 
-doisPontos: DOISPONTOS { std::cout << "Dois Pontos: " << *$1 << std::endl; }
+abreParenteses: ABREPARENTESES { std::cout << "Abre Parenteses: " << std::endl; }
 
-pontoVirgula: PONTOVIRGULA { std::cout << "Ponto e Virgula: " << *$1 << std::endl; }
+fechaParenteses: FECHAPARENTESES { std::cout << "Fecha Parenteses: " << std::endl; }
 
-abreParenteses: ABREPARENTESES { std::cout << "Abre Parenteses: " << *$1 << std::endl; }
+abreColchete: ABRECOLCHETE { std::cout << "Abre Colchete: " << std::endl; }
 
-fechaParenteses: FECHAPARENTESES { std::cout << "Fecha Parenteses: " << *$1 << std::endl; }
+fechaColchete: FECHACOLCHETE { std::cout << "Fecha Colchete: " << std::endl; }
 
-abreColchete: ABRECOLCHETE { std::cout << "Abre Colchete: " << *$1 << std::endl; }
+abreChave: ABRECHAVE { std::cout << "Abre Chave: " << std::endl; }
 
-fechaColchete: FECHACOLCHETE { std::cout << "Fecha Colchete: " << *$1 << std::endl; }
+fechaChave: FECHACHAVE { std::cout << "Fecha Chave: " << std::endl; }
 
-abreChave: ABRECHAVE { std::cout << "Abre Chave: " << *$1 << std::endl; }
+ponto: PONTO { std::cout << "Ponto: " << std::endl; }
 
-fechaChave: FECHACHAVE { std::cout << "Fecha Chave: " << *$1 << std::endl; }
+mais: MAIS { std::cout << "Mais: " << std::endl; }
 
-ponto: PONTO { std::cout << "Ponto: " << *$1 << std::endl; }
+menos: MENOS { std::cout << "Menos: " << std::endl; }
 
-mais: MAIS { std::cout << "Mais: " << *$1 << std::endl; }
+produto: PRODUTO { std::cout << "Produto: " << std::endl; }
 
-menos: MENOS { std::cout << "Menos: " << *$1 << std::endl; }
+barra: BARRA { std::cout << "Barra: " << std::endl; }
 
-produto: PRODUTO { std::cout << "Produto: " << *$1 << std::endl; }
+comparaSeta: COMPARASETA { std::cout << "Compara <>: " << std::endl; }
 
-barra: BARRA { std::cout << "Barra: " << *$1 << std::endl; }
+menor: MENOR { std::cout << "Menor: " << std::endl; }
 
-comparaSeta: COMPARASETA { std::cout << "Compara <>: " << *$1 << std::endl; }
+menorIgual: MENORIGUAL { std::cout << "Menor Igual: " << std::endl; }
 
-menor: MENOR { std::cout << "Menor: " << *$1 << std::endl; }
+maior: MAIOR { std::cout << "Maior: " << std::endl; }
 
-menorIgual: MENORIGUAL { std::cout << "Menor Igual: " << *$1 << std::endl; }
+maiorIgual: MAIORIGUAL { std::cout << "Maior Igual: " << std::endl; }
 
-maior: MAIOR { std::cout << "Maior: " << *$1 << std::endl; }
+e: E { std::cout << "E: " << std::endl; }
 
-maiorIgual: MAIORIGUAL { std::cout << "Maior Igual: " << *$1 << std::endl; }
+ou: OU { std::cout << "Ou: " << std::endl; }
 
-e: E { std::cout << "E: " << *$1 << std::endl; }
+atribuicao: ATRIBUICAO { std::cout << "Atribuicao: " << std::endl; }
 
-ou: OU { std::cout << "Ou: " << *$1 << std::endl; }
+igual: IGUAL { std::cout << "Igual: " << std::endl; }
 
-atribuicao: ATRIBUICAO { std::cout << "Atribuicao: " << *$1 << std::endl; }
+compara: COMPARA { std::cout << "Compara: " << std::endl; }
 
-igual: IGUAL { std::cout << "Igual: " << *$1 << std::endl; }
-
-compara: COMPARA { std::cout << "Compara: " << *$1 << std::endl; }
-
-ternaria: TERNARIA { std::cout << "Ternaria: " << *$1 << std::endl; }
+ternaria: TERNARIA { std::cout << "Ternaria: " << std::endl; }
 %%
 
 namespace Simples {
