@@ -119,6 +119,7 @@
 %token   ATRIBUICAO    "atribuicao"
 %token   IGUAL    "igual"
 %token   COMPARA    "compara"
+%token   DIFERENTE    "diferente"
 %token   TERNARIA   "ternaria"
 
 %%
@@ -127,12 +128,20 @@
 programa: declaracoes {std::cout << "DECLARACOES" << std::endl; }
 
 declaracoes: lista_declaracao_de_tipo {std::cout << "COMECA A LISTA" << std::endl; }
+            | lista_declaracao_de_globais {std::cout << "COMECA OS GLOBAIS" << std::endl;}
 
 lista_declaracao_de_tipo: 
             | TIPO DOISPONTOS lista_declaracao_tipo {std::cout << "ABRE DECLARACOES" <<std::endl;}
 
+lista_declaracao_de_globais:
+            | GLOBAL DOISPONTOS lista_declaracao_variavel {std::cout << "ABRE VARIAVEIS" << std::endl;}
+
 lista_declaracao_tipo: declaracao_tipo {std::cout << "ACHEI UM TIPO " <<std::endl;}
             |lista_declaracao_tipo declaracao_tipo {std::cout << "LOOP DECLARA TIPO" <<std::endl;}
+
+lista_declaracao_variavel: declaracao_variavel {std::cout << "ACHEI UMA VARIAVEL " <<std::endl;}
+            |lista_declaracao_variavel declaracao_variavel {std::cout << "LOOP DECLARA VAR" <<std::endl;}
+
 
 declaracao_tipo:
             IDENTIFIER IGUAL descritor_tipo {std::cout << "DECLARA UM TIPO" <<std::endl;}
@@ -155,24 +164,77 @@ tipo_constantes:
 
 /*VARIÁVEIS*/
 declaracao_variavel: 
-      IDENTIFIER DOISPONTOS IDENTIFIER ATRIBUICAO INTEGER {std::cout << "TESTE VARIAVEL DECLARADA" <<std::endl;}
+      IDENTIFIER DOISPONTOS IDENTIFIER ATRIBUICAO expr {std::cout << "TESTE VARIAVEL DECLARADA" <<std::endl;}
 
+/* REGISTROS */
+criacao_de_registro:
+    tipo_registro
+    | criacao_de_registro VIRGULA tipo_registro
 
-/*EXPRESSÕES
-expr: expressao_logica
-      | expressao_relacional
-      | expressao_aritmetica
-      | criacao_de_registro
-      | nulo
-      | expressao_com_parenteses
-      | chamada_de_funcao
-      | local_de_armazenamento
-      | literal
+tipo_registro:
+    IDENTIFIER IGUAL valor
 
-expressao_logica: variable E variable 
-                  | variable OU variable
-*/
+valor:
+    INTEGER
+    | REAL
+    | CADEIA
 
+/* EXPRESSÕES */
+expr: expr_logica {std::cout << "EXPR_LOGIAC" <<std::endl;}
+      | ABRECHAVE criacao_de_registro FECHACHAVE {std::cout << "REGISTRO CRIADO" <<std::endl;}
+
+expr_logica: expr_logica OU expr_relacional {std::cout << "OU" <<std::endl;}
+      | expr_logica E expr_relacional {std::cout << "E" <<std::endl;}
+      | expr_relacional
+
+expr_relacional:
+       expr_relacional MENORIGUAL expr_aritmetica  {std::cout << "MENORIGUAL" <<std::endl;}
+      | expr_relacional MAIORIGUAL expr_aritmetica {std::cout << "MAIORIGUAL" <<std::endl;}
+      | expr_relacional MENOR expr_aritmetica {std::cout << "MENOR" <<std::endl;}
+      | expr_relacional MAIOR expr_aritmetica {std::cout << "MAIOR" <<std::endl;}
+      | expr_relacional DIFERENTE expr_aritmetica {std::cout << "DIFERENTE" <<std::endl;}
+      | expr_relacional COMPARA expr_aritmetica {std::cout << "COMPARA" <<std::endl;}
+      | expr_aritmetica
+
+expr_aritmetica:
+      expr_aritmetica MAIS expr_aritmetica_linha {std::cout << "MAIS" <<std::endl;}
+      | expr_aritmetica MENOS expr_aritmetica_linha {std::cout << "MENOS" <<std::endl;}
+      | expr_aritmetica_linha
+
+expr_aritmetica_linha:
+      expr_aritmetica_linha PRODUTO fator {std::cout << "PRODUTO" <<std::endl;}
+      | expr_aritmetica_linha BARRA fator {std::cout << "DIVISAO" <<std::endl;}
+      | fator
+
+fator:
+    ABREPARENTESES expr FECHAPARENTESES {std::cout << "PARENTESES" <<std::endl;}
+    | valor {std::cout << "VALOR" <<std::endl;}
+    | IDENTIFIER {std::cout << "ID" <<std::endl;}
+  /*   | chamada_de_funcao
+    | local_de_armazenamento
+    | nulo */
+
+/* expressao_logica:
+  E
+  | OU
+
+expressao_aritmetica:
+      PRODUTO
+      | BARRA
+      | MAIS
+      | MENOS
+
+expressao_relacional:
+      COMPARA
+      | DIFERENTE
+      | MAIOR
+      | MENOR 
+      | MAIORIGUAL
+      | MENORIGUAL
+      | E
+      | OU */
+
+/* 
 constant : INTEGER { std::cout << "Inteiro: " << $1 << std::endl; }
          | REAL  { std::cout << "Real: " << $1 << std::endl; }
 
@@ -278,7 +340,7 @@ igual: IGUAL { std::cout << "Igual: " << std::endl; }
 
 compara: COMPARA { std::cout << "Compara: " << std::endl; }
 
-ternaria: TERNARIA { std::cout << "Ternaria: " << std::endl; }
+ternaria: TERNARIA { std::cout << "Ternaria: " << std::endl; } */
 %%
 
 namespace Simples {

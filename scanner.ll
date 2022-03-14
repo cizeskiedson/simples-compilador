@@ -241,6 +241,9 @@ eol     [\n\r]+
 "==" {
   return token::COMPARA;
 }
+"!=" {
+  return token::DIFERENTE;
+}
 "?" {
   return token::TERNARIA;
 }

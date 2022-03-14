@@ -288,7 +288,8 @@ namespace Simples {
         ATRIBUICAO = 309,
         IGUAL = 310,
         COMPARA = 311,
-        TERNARIA = 312
+        DIFERENTE = 312,
+        TERNARIA = 313
       };
     };
 
@@ -749,10 +750,10 @@ namespace Simples {
     enum
     {
       yyeof_ = 0,
-      yylast_ = 34,     ///< Last index in yytable_.
-      yynnts_ = 10,  ///< Number of nonterminal symbols.
-      yyfinal_ = 6, ///< Termination state number.
-      yyntokens_ = 58  ///< Number of tokens.
+      yylast_ = 75,     ///< Last index in yytable_.
+      yynnts_ = 22,  ///< Number of nonterminal symbols.
+      yyfinal_ = 9, ///< Termination state number.
+      yyntokens_ = 59  ///< Number of tokens.
     };
 
 
@@ -763,7 +764,7 @@ namespace Simples {
 
 #line 44 "parser.yy"
 } // Simples
-#line 767 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.hh"
+#line 768 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.hh"
 
 
 
@@ -779,7 +780,7 @@ namespace Simples {
     }
   }
 
-#line 783 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.hh"
+#line 784 "/home/edson/Documents/uem/COMPILADORES/simples_compilador/build/parser.hh"
 
 
 #endif // !YY_YY_HOME_EDSON_DOCUMENTS_UEM_COMPILADORES_SIMPLES_COMPILADOR_BUILD_PARSER_HH_INCLUDED
